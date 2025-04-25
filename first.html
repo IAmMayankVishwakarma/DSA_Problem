@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Fibonacci Numbers up to 100
+/*he Fibonacci numbers are named after a 13th century Italian mathematician known as Fibonacci.
+The two first Fibonacci numbers are 0 and 1, and the next Fibonacci number is always the sum of the two previous numbers, so we get 0, 1, 1, 2, 3, 5, 8, 13, 21, ...*/
+
+let numOne = 0;
+let numTwo = 1;
+console.log(numOne);
+console.log(numTwo);
+for (let index = 0; index <= 100; index++) {
+    let newNum = numOne + numTwo;
+    if (newNum > 100) {
+        break;
+    }
+    console.log(newNum +" ===== "+ index);
+    numOne = numTwo;
+    numTwo = newNum;   
+ }
+
+    </script>
+</body>
+</html>
