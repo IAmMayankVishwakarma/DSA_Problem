@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <script>
+    // Selection Sort Algorithm
+    // The selection sort algorithm divides the input list into two parts: a sorted part and an unsorted part.
+    // It repeatedly selects the smallest (or largest, depending on the order) element from the unsorted part and moves it to the end of the sorted part.
+
+    function selectionSort(arr) {
+        const n = arr.length;
+        for (let i = 0; i < n - 1; i++) {
+            let minIndex = i;
+            for (let j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if (minIndex !== i) {
+                [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]]; // Swap elements
+            }
+        }
+        return arr;
+    }
+
+    const numbers = [64, 25, 12, 22, 11];
+    console.log("Unsorted array:", numbers);
+    const sortedNumbers = selectionSort(numbers);
+    console.log("Sorted array:", sortedNumbers);
+  </script>
+</body>
+</html>
